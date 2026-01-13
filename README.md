@@ -7,102 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        /* Default Theme (Scout Green) */
-        
-         :root {
-            --primary-bg: linear-gradient(180deg, #1e3d2b, #0f2419);
-            --primary-color: #ffd966;
-            --secondary-color: #c9e8d6;
-            --accent-color: #ffd966;
-            --card-bg: rgba(255, 255, 255, 0.08);
-            --card-border: rgba(255, 255, 255, 0.15);
-        }
-        /* Blue Theme */
-        
-        .theme-blue {
-            --primary-bg: linear-gradient(180deg, #0a2b4e, #051a33);
-            --primary-color: #4fc3f7;
-            --secondary-color: #b3e5fc;
-            --accent-color: #4fc3f7;
-            --card-bg: rgba(255, 255, 255, 0.08);
-            --card-border: rgba(255, 255, 255, 0.15);
-        }
-        /* Red Theme */
-        
-        .theme-red {
-            --primary-bg: linear-gradient(180deg, #4a0f0f, #2a0909);
-            --primary-color: #ff6b6b;
-            --secondary-color: #ffb3b3;
-            --accent-color: #ff6b6b;
-            --card-bg: rgba(255, 255, 255, 0.08);
-            --card-border: rgba(255, 255, 255, 0.15);
-        }
-        /* Purple Theme */
-        
-        .theme-purple {
-            --primary-bg: linear-gradient(180deg, #2d0a4a, #1a052e);
-            --primary-color: #b388ff;
-            --secondary-color: #d1c4e9;
-            --accent-color: #b388ff;
-            --card-bg: rgba(255, 255, 255, 0.08);
-            --card-border: rgba(255, 255, 255, 0.15);
-        }
-        /* Apply theme colors */
-        
         body {
-            background: var(--primary-bg);
-            color: var(--secondary-color);
-        }
-        
-        header h1,
-        section h2,
-        a,
-        .theme-btn {
-            color: var(--primary-color);
-        }
-        
-        section {
-            background: var(--card-bg);
-            border-color: var(--card-border);
-        }
-        /* Theme Switcher */
-        
-        .theme-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
-        }
-        
-        .theme-btn {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 2px solid white;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        
-        .theme-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        #theme-default {
-            background: #1e3d2b;
-        }
-        
-        #theme-blue {
-            background: #0a2b4e;
-        }
-        
-        #theme-red {
-            background: #4a0f0f;
-        }
-        
-        #theme-purple {
-            background: #2d0a4a;
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(180deg, #1e3d2b, #0f2419);
+            color: #f2f2f2;
         }
         
         header {
@@ -122,22 +31,22 @@
             font-size: 1.3rem;
             margin-top: 12px;
             font-style: italic;
-            color: var(--secondary-color);
+            color: #c9e8d6;
         }
         
         section {
             max-width: 1000px;
             margin: 40px auto;
             padding: 40px;
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 18px;
-            border: 2px solid var(--card-border);
+            border: 2px solid rgba(255, 255, 255, 0.15);
         }
         
         section h2 {
             font-size: 2.2rem;
             margin-bottom: 20px;
-            color: var(--primary-color);
+            color: #ffd966;
             letter-spacing: 1px;
             text-align: center;
         }
@@ -164,7 +73,7 @@
         }
         
         a {
-            color: var(--primary-color);
+            color: #ffd966;
             text-decoration: none;
         }
         
@@ -182,37 +91,11 @@
     </style>
 </head>
 
-<body class="">
-    <div class="theme-switcher">
-        <div class="theme-btn" id="theme-default" onclick="setTheme('')" title="Scout Green"></div>
-        <div class="theme-btn" id="theme-blue" onclick="setTheme('theme-blue')" title="Blue"></div>
-        <div class="theme-btn" id="theme-red" onclick="setTheme('theme-red')" title="Red"></div>
-        <div class="theme-btn" id="theme-purple" onclick="setTheme('theme-purple')" title="Purple"></div>
-    </div>
+<body>
 
     <header>
         <h1>Boy Scout Troop 433</h1>
         <p>Be Prepared</p>
-        <div class="theme-switcher">
-            <div class="theme-btn" id="theme-default" onclick="setTheme('')" title="Scout Green"></div>
-            <div class="theme-btn" id="theme-blue" onclick="setTheme('theme-blue')" title="Blue"></div>
-            <div class="theme-btn" id="theme-red" onclick="setTheme('theme-red')" title="Red"></div>
-            <div class="theme-btn" id="theme-purple" onclick="setTheme('theme-purple')" title="Purple"></div>
-        </div>
-        <script>
-            function setTheme(theme) {
-                document.body.className = theme;
-                localStorage.setItem('theme', theme);
-            }
-
-            // Load saved theme or default
-            document.addEventListener('DOMContentLoaded', () => {
-                const savedTheme = localStorage.getItem('theme') || '';
-                if (savedTheme) {
-                    setTheme(savedTheme);
-                }
-            });
-        </script>
     </header>
 
     <section>
