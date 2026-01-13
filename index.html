@@ -8,83 +8,91 @@
     <style>
         body {
             margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, #0b3d2e, #1f6f54);
-            color: #ffffff;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(180deg, #1e3d2b, #0f2419);
+            color: #f2f2f2;
         }
 
         header {
-            padding: 60px 20px;
+            background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+            padding: 80px 20px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.25);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-top: 10px;
+            font-size: 1.3rem;
+            margin-top: 12px;
+            font-style: italic;
+            color: #c9e8d6;
         }
 
         section {
             max-width: 1000px;
             margin: 40px auto;
-            padding: 30px;
+            padding: 35px;
             background: rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            backdrop-filter: blur(6px);
+            border-radius: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
         }
 
         section h2 {
             font-size: 2rem;
             margin-bottom: 15px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-            padding-bottom: 8px;
+            color: #ffd966;
+            letter-spacing: 1px;
         }
 
-        .cards {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 22px;
         }
 
         .card {
-            background: rgba(0, 0, 0, 0.25);
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 22px;
             border-radius: 14px;
+            border-left: 5px solid #ffd966;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
 
         .card h3 {
             margin-top: 0;
-            font-size: 1.4rem;
+            color: #a6e3c2;
         }
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .info p {
+            margin: 8px 0;
+            line-height: 1.5;
         }
 
         a {
-            color: #a8ffd6;
+            color: #ffd966;
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+            background: rgba(0, 0, 0, 0.35);
         }
     </style>
 </head>
@@ -92,53 +100,66 @@
 
 <header>
     <h1>Boy Scout Troop 433</h1>
-    <p>Prepared. Skilled. United.</p>
+    <p>Be Prepared</p>
 </header>
 
 <section>
-    <h2>About Our Troop</h2>
+    <h2>About Troop 433</h2>
     <p>
-        Troop 433 is dedicated to building leadership, character, and outdoor skills.
-        Our scouts learn responsibility, teamwork, and confidence through hands on
-        experiences and community involvement.
+        Boy Scout Troop 433 is committed to building strong character, leadership,
+        and outdoor skills. Through camping, service, and hands on learning,
+        scouts grow into responsible leaders who live by the Scout Oath and Law.
     </p>
 </section>
 
 <section>
     <h2>What We Do</h2>
-    <div class="cards">
+    <div class="grid">
         <div class="card">
-            <h3>Outdoor Adventures</h3>
+            <h3>Outdoor Skills</h3>
             <p>
-                Camping, hiking, backpacking, and survival skills that challenge and inspire.
+                Camping, hiking, fire building, cooking, and wilderness survival.
             </p>
         </div>
         <div class="card">
-            <h3>Leadership</h3>
+            <h3>Leadership Development</h3>
             <p>
-                Scouts lead meetings, plan events, and grow into confident leaders.
+                Scouts plan events, lead patrols, and take responsibility.
             </p>
         </div>
         <div class="card">
             <h3>Community Service</h3>
             <p>
-                Giving back through service projects that make a real difference.
+                Giving back through meaningful service projects in our community.
             </p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Get Involved</h2>
-    <p>
-        Interested in joining or learning more about Troop 433.
-        Reach out to us or visit a meeting to see scouting in action.
-    </p>
+    <h2>Meeting Location</h2>
+    <div class="info">
+        <p><strong>Chartered Organization</strong> St. Andrew's</p>
+        <p><strong>Address</strong> 2301 Deltona Blvd, Spring Hill, FL 34606</p>
+    </div>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <div class="info">
+        <p>
+            Email  
+            <a href="mailto:troop433treasurer1@gmail.com">
+                troop433treasurer1@gmail.com
+            </a>
+        </p>
+    </div>
 </section>
 
 <footer>
-    © 2026 Boy Scout Troop 433 · Built with pride
+    © 2026 Boy Scout Troop 433 · Be Prepared
 </footer>
 
 </body>
 </html>
+
